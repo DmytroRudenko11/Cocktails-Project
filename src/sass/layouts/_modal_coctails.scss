@@ -1,0 +1,313 @@
+.modal-cockt__close-icon {
+  fill: var(--black-color);
+}
+
+
+.modal-cockt__close-btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+
+  top: 8px;
+  left: calc(100% - 38px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  background-color: var(--white-color);
+  border: none;
+  border-radius: 50%;
+  fill: var(--black-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    transition-property: background-color;
+    transition: 250ms;
+  }
+}
+
+
+.modal-cockt.is-hidden {
+  scale: 0;
+}
+
+.modal-cockt {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  transition-duration: 250ms;
+  transition-property: scale;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 20;
+
+}
+
+
+
+.modal-cockt__card {
+  overflow: scroll;
+  overflow-x: hidden; 
+
+position: absolute;
+
+
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+
+  transition-property: scale;
+
+  background-color: var(--white-color);
+
+  padding: 40px 20px;
+  width: 320px;
+
+
+  gap: 20px;
+
+  display: grid;
+
+  grid-template-rows: auto auto 280px auto 50px;
+  grid-template-columns: 280px;
+
+  grid-template-areas:
+    'name'
+    'instr'
+    'imgtumb'
+    'ingedientsbox'
+    'boxbutton';
+
+  @include tablet {
+    max-height: 700px;
+    top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    width: 820px;
+    padding: 0px;
+
+    display: grid;
+
+    grid-template-rows: auto auto 1fr 80px;
+    grid-template-columns: 280px 1fr;
+
+    grid-template-areas:
+      'imgtumb name'
+      'imgtumb ingedientsbox'
+      'instr instr'
+      'boxbutton boxbutton';
+  }
+
+  @include desktop {
+    max-height: 700px;
+    top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+    width: 820px;
+    padding: 0px;
+
+
+    display: grid;
+
+    grid-template-rows: auto auto 1fr 80px;
+    grid-template-columns: 280px 1fr;
+
+    grid-template-areas:
+      'imgtumb name'
+      'imgtumb ingedientsbox'
+      'instr instr'
+      'boxbutton boxbutton';
+  }
+}
+
+.modal-cockt__card::-webkit-scrollbar {
+  width: 3px;
+}
+
+.modal-cockt__card::-webkit-scrollbar-track {
+  background-color: var(--black-color);
+}
+
+.modal-cockt__card::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+}
+
+
+.modal-cockt__img-tumb {
+  grid-area: imgtumb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  overflow: hidden;
+
+}
+
+.modal-cockt__img {
+  height: 100%;
+}
+
+.modal-cockt__ingedients-box {
+  color: var(--black-color);
+  grid-area: ingedientsbox;
+}
+
+.modal-cockt__name {
+  color: var(--black-color);
+  grid-area: name;
+
+  @include font(900, 32, 1.18, null);
+
+  @include tablet {
+    margin-top: 40px;
+  }
+
+  @include desktop {
+    margin-top: 40px;
+  }
+}
+
+.modal-cockt__per-list {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+
+  padding-left: 20px;
+}
+
+.modal-cockt__title {
+  padding-bottom: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.modal-cockt__per-list {
+  margin: 0px;
+  list-style-type: '✶ ';
+}
+
+
+.modal-cockt__instr-title {
+  color: var(--black-color);
+  padding-bottom: 20px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.6;
+  text-transform: uppercase;
+
+  @include tablet {
+    padding-left: 30px;
+  }
+
+  @include desktop {
+    padding-left: 30px;
+  }
+}
+
+.modal-cockt__post-title {
+  padding-bottom: 8px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.modal-cockt__instr {
+  grid-area: instr;
+}
+
+.modal-cockt__post-title {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.modal-cockt__instr-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.75;
+
+  color: var(--gray-color);
+
+  @include tablet {
+    padding: 0 30px;
+  }
+
+  @include desktop {
+    padding: 0 30px;
+  }
+
+
+}
+
+.modal-cockt__box-button {
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+
+  grid-area: boxbutton;
+
+  @include tablet {
+    justify-content: end;
+    margin-bottom: 30px;
+    margin-right: 30px;
+  }
+
+  @include tablet {
+    justify-content: end;
+    margin-bottom: 30px;
+    margin-right: 30px;
+  }
+}
+
+.modal-cockt__add-rem-btn {
+
+  padding: 0 20px;
+  height: 39px;
+  background-color: var(--orange-color);
+  border: none;
+
+  border-radius: 5px;
+
+  color: var(--white-color);
+
+  transition: background-color 200ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    outline: transparent;
+  }
+
+  @include tablet {
+    
+    height: 48px;
+  }
+
+  @include desktop {
+    height: 48px;
+  }
+}
+
+.modal-cockt__ingred a {
+cursor: pointer;
+
+&:hover,
+&:focus {
+color: var(--accent-color);
+}
+
+}
+

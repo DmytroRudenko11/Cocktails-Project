@@ -1,0 +1,131 @@
+<section class="header container" id="header">
+  <div class="header-wrap">
+    <a href="/src/index.html">
+      <img
+        class="logo"
+        src="/src/images/Logo-COCKTAILS.png"
+        alt="coctail logo"
+      />
+    </a>
+    <nav class="header-nav">
+      <ul class="header-nav-list">
+        <li class="header-nav-item">
+          <a class="header-nav-link" href="/src/index.html">Home</a>
+        </li>
+        <li class="header-nav-item">
+          <a class="header-nav-link" href="#">Favorite</a>
+          <ul class="header-dropdown">
+            <li class="header-dropdown-item">
+              <a
+                class="header-dropdown-link"
+                href="/src/favorite-cocktails.html"
+                >Favorite cocktails</a
+              >
+            </li>
+            <li class="header-dropdown-item">
+              <a
+                class="header-dropdown-link"
+                href="/src/favorite-ingridients.html"
+                >Favorite ingredients</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="header-search">
+      <form class="header-search-icon">
+        <button type="submit">
+          <svg class="search__icon" width="24" height="24">
+            <use href="/src/images/header__icons.svg#icon-search"></use>
+          </svg>
+        </button>
+        <input
+          class="header-search-input"
+          type="text"
+          name="searchQuery"
+          placeholder="Search |"
+        />
+      </form>
+    </div>
+
+    <div class="theme-switch-wrapper">
+      <span class="switch-light">Light</span>
+      <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+      </label>
+      <span class="switch-dark">Dark</span>
+    </div>
+
+
+    <button class="menu-btn" type="button">
+      <span class="menu-btn__icon-wrap">
+        <svg class="menu-btn__icon" width="30" height="16">
+          <use href="/src/images/symbol-defs.svg#icon-burger"></use></svg
+      ></span>
+
+      <span class="menu-btn__icon-wrap visually-hidden">
+        <svg class="menu-btn__icon" width="30" height="16">
+          <use href="/src/images/symbol-defs.svg#icon-burger-close"></use></svg
+      ></span>
+    </button>
+  </div>
+
+  <div class="menu is-hidden" data-menu-closed="1">
+    <div class="menu-container">
+        <div class="menu-theme-switch-wrapper">
+          <span class="switch-light">Light</span>
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="round slider"></div>
+          </label>
+          <span class="switch-dark">Dark</span>
+        </div>
+
+      <div class="menu-header-search">
+        <form class="menu-search-icon">
+          <button type="submit">
+            <svg class="menu-search__icon" width="24" height="24">
+              <use href="/src/images/header__icons.svg#icon-search"></use>
+            </svg>
+          </button>
+          <input
+            class="header-search-input"
+            type="text"
+            name="searchQuery"
+            placeholder="Search |"
+          />
+        </form>
+      </div>
+
+      <div class="menu-list-wrap">
+        <ul class="menu-list">
+          <li class="menu-item">
+            <a class="menu-dropdown-link" href="/src/index.html">Home</a>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-wrap"> <a class="menu-dropdown-link dark" href="#">Favorite</a><svg class="menu-dropdown-icon" width="24" height="24">
+              <use href="/src/images/symbol-defs.svg#icon-arrow-down"></use></div>
+            <ul class="menu-dropdown">
+              <li class="menu-dropdown-item">
+                <a
+                  class="menu-dropdown-link dark"
+                  href="/src/favorite-cocktails.html"
+                  >Favorite cocktails</a
+                >
+              </li>
+              <li class="menu-dropdown-item">
+                <a
+                  class="menu-dropdown-link dark"
+                  href="/src/favorite-ingridients.html"
+                  >Favorite ingredients</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,379 @@
+.cocktail__section {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  width: 100%;
+
+  @include tablet {
+    padding: 110px 18px 60px 18px;
+  }
+
+  @include desktop {
+    padding: 105px 0 60px 0;
+  }
+}
+
+.gallery__title {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.91;
+  color: var(--black-color);
+
+  text-align: center;
+
+  margin-bottom: 60px;
+
+  @include tablet {
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 1.19;
+  }
+
+  @include desktop {
+    font-family: 'Poppins';
+
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.5;
+  }
+}
+
+.cocktail__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+}
+
+.cocktail__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 280px;
+
+  margin: 0;
+
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+
+  transition: all 200ms linear;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 14px 7px rgba(199, 103, 48, 0.81);
+  }
+
+  @include tablet {
+    height: 520px;
+    @include calc(2, 32px);
+  }
+
+  @include desktop {
+    height: 575px;
+    @include calc(3, 32px);
+  }
+}
+
+.cocktail__image {
+  width: 100%;
+  height: auto;
+
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 20px;
+}
+
+.cocktail__btn--box {
+  display: flex;
+  gap: 17px;
+  justify-content: center;
+  padding: 20px;
+
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.02em;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 1.2;
+
+    gap: 12px;
+  }
+
+  @include desktop {
+    gap: 16px;
+  }
+}
+
+.learnmore__btn {
+  width: 108px;
+  height: 39px;
+  background-color: var(--orange-color);
+  border: none;
+
+  border-radius: 5px;
+
+  color: var(--white-color);
+
+  transition: background-color 200ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    outline: transparent;
+  }
+
+  @include tablet {
+    width: 160px;
+    height: 48px;
+  }
+
+  @include desktop {
+    width: 182px;
+  }
+}
+
+.add__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  width: 110px;
+  height: 39px;
+  background-color: var(--white-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+
+  color: var(--accent-color);
+
+  transition: all 200ms linear;
+
+  &:hover,
+  &:focus {
+    color: var(--orange-color);
+    border-color: var(--orange-color);
+    box-shadow: inset 0px 0px 42px -13px rgba(199, 103, 48, 0.81);
+
+    outline: transparent;
+  }
+
+  @include tablet {
+    width: 125px;
+    height: 48px;
+  }
+
+  @include desktop {
+    width: 141px;
+  }
+}
+
+.cocktail__title {
+  font-family: 'Roboto';
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  color: var(--black-color);
+  text-align: center;
+
+  @include tablet {
+    font-size: 28px;
+    line-height: 1.18;
+  }
+
+  @include desktop {
+    font-size: 32px;
+    line-height: 1.19;
+    margin-bottom: 20px;
+  }
+}
+
+.noresult__container {
+  margin: 0 auto;
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.noresult__text {
+  width: 100%;
+
+  margin: 0 auto;
+  margin-bottom: 60px;
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.91;
+  color: var(--black-color);
+
+  text-align: center;
+
+  @include tablet {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.31;
+  }
+
+  @include desktop {
+    margin-bottom: 70px;
+    width: 500px;
+    margin-bottom: 70px;
+    font-family: 'Poppins';
+    font-size: 48px;
+    line-height: 1.5;
+  }
+}
+
+.noresult__box {
+  width: 100%px;
+  height: 310px;
+  margin: 0 auto;
+  background-image: url(../images/hero-error/people-mob.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include retina {
+    background-image: url(../images/hero-error/people-mob-2x.png);
+  }
+
+  @include tablet {
+    width: 345px;
+    height: 380px;
+    background-image: url(../images/hero-error/coctail-tab.png);
+    @include retina {
+      background-image: url(../images/hero-error/people-tab-2x.png);
+    }
+  }
+
+  @include desktop {
+    background-image: url(../images/hero-error/people.png);
+    @include retina {
+      background-image: url(../images/hero-error/people-2x.png);
+    }
+  }
+}
+
+.paginator {
+  display: flex;
+  justify-content: space-evenly;
+
+  margin-top: 24px;
+
+  @include tablet {
+    margin-top: 32px;
+  }
+}
+
+.pagination__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 8;
+  font-family: 'Montserrat';
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.21;
+
+  color: var(--orange-color);
+
+  @include tablet {
+    gap: 14px;
+
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.pagination__item {
+  text-align: center;
+  padding: 8px 12px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+
+  background: var(--white-color);
+  border: 1px solid #eaebea;
+  border-radius: 4px;
+
+  &:hover {
+    color: var(--accent-color);
+    box-shadow: 0px 0px 14px 7px rgba(199, 103, 48, 0.81);
+  }
+
+  @include tablet {
+    width: 40px;
+    height: 40px;
+    padding: 10px 12px;
+  }
+
+  @include desktop {
+  }
+}
+
+.pagination__item--active {
+  color: var(--white-color);
+  background-color: var(--orange-color);
+  &:hover {
+    color: var(--white-color);
+  }
+}
+
+.backward,
+.forward {
+  width: 60px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  @include tablet {
+    border: 1px solid #eaebea;
+  }
+}
+
+.icon-hert {
+  width: 17px;
+  height: 15px;
+  fill: var(--white-color);
+}
+
+.icon-hert-remove {
+  fill: var(--accent-color);
+}
+
+.backward,
+.forward {
+  fill: var(--orange-color);
+
+  &:hover {
+    fill: var(--accent-color);
+  }
+
+  @include tablet {
+    &:hover {
+      box-shadow: 0px 0px 14px 7px rgba(199, 103, 48, 0.81);
+    }
+  }
+}
+
+.backward:disabled,
+.forward:disabled {
+  fill: #eaebea;
+  &:hover {
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,17 @@
+@import './untils/mixins';
+@import './base/box';
+@import './base/common';
+@import './untils/variables';
+@import './base/reset';
+
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/gallary';
+@import './layouts/footer';
+
+
+@import './layouts/coctails';
+@import './layouts/ingridients';
+
+@import './layouts/modal_coctails';
+@import './layouts/modal-ingridients';

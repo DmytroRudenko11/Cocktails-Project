@@ -1,0 +1,15 @@
+:root {
+    --black-color: #202025;
+    --accent-color: #FD5103;
+    --gray-color: #5F6775;
+    --white-color: #FCFCFC;
+    --orange-color: #FE7031;
+}
+
+[data-theme="dark"] {
+        --black-color:#FCFCFC;
+        --accent-color: #FD5103;
+        --gray-color: #5F6775;
+        --white-color: #202025;
+        --orange-color: #FE7031;
+}

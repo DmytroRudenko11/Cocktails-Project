@@ -1,0 +1,45 @@
+.favorit-coct__section {
+  padding-top: 70px;
+  padding-bottom: 60px;
+}
+
+.favorit-coct__wrapper {
+  display: block;
+  margin: 0 auto;
+  max-width: 239px;
+  padding-bottom: 62px;
+
+  @include tablet {
+    max-width: 296px;
+    padding-bottom: 421px;
+  }
+
+  @include desktop {
+    max-width: 385px;
+    padding-bottom: 412px;
+  }
+}
+
+.favorit-coct__text {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 3;
+  text-align: center;
+  color: var(--black-color);
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 2.5;
+  }
+
+  @include desktop {
+    font-size: 32px;
+    line-height: 2.25;
+  }
+}
+.icon-hert-remove {
+  width: 17px;
+  height: 15px;
+  fill: var(--accent-color);
+}

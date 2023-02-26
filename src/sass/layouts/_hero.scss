@@ -1,0 +1,380 @@
+.section-hero {
+  padding-bottom: 40px;
+
+  @include tablet {
+    padding-top: 0;
+    padding-bottom: 50px;
+    margin-top: 60px;
+  }
+
+  @include desktop {
+    padding-bottom: 50px;
+    margin-top: 98px;
+  }
+}
+
+.hero-container {
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+
+  @include mobile {
+    width: 100%;
+  }
+
+  @include tablet {
+    width: 768px;
+    align-items: flex-start;
+  }
+
+  @include desktop {
+    width: 1280px;
+  }
+}
+
+.hero-container .section-content {
+  padding-top: 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: start;
+  align-content: flex-start;
+  align-items: center;
+
+  position: relative;
+  width: 100%;
+
+  padding-left: 20px;
+
+  @include tablet {
+    padding-top: 60px;
+    padding-left: 20px;
+    align-items: flex-start;
+  }
+
+  @include desktop {
+    padding-left: 16px;
+    padding-top: 0;
+  }
+}
+
+.hero__title {
+  font-family: var(--primary-font-family);
+  color: var(--accent-color);
+
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 42px;
+  max-width: 280px;
+
+  @include tablet {
+    max-width: 336px;
+  }
+
+  @include desktop {
+    font-size: 52px;
+    line-height: 1.54;
+    max-width: 688px;
+  }
+}
+
+.hero__list {
+  display: none;
+
+  @include tablet {
+    width: 324px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+
+  @include desktop {
+    width: 520px;
+  }
+}
+
+.hero__item {
+  display: block;
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    transform: scale(2);
+    color: var(--accent-color);
+  }
+
+  box-sizing: border-box;
+
+  width: 24px;
+  height: 25px;
+  font-family: 'Poppins';
+  color: var(--gray-color);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include desktop {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+}
+
+.letter-active {
+  transform: scale(2);
+  color: var(--accent-color);
+}
+
+.hero__text {
+  display: none;
+  font-family: 'Poppins', sans-serif;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.02em;
+  color: var(--black-color);
+  opacity: 0.8;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  @include tablet {
+    display: block;
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  @include desktop {
+    font-size: 18px;
+    line-height: 1.56;
+  }
+}
+
+.hero__text.mob {
+  display: block;
+  color: var(--black-color);
+  margin-top: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.hero-button {
+  display: flex;
+  justify-content: space-between;
+  min-width: 93px;
+  cursor: pointer;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  text-align: start;
+  align-items: center;
+  background-color: var(--white-color);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.35;
+  color: var(--accent-color);
+  margin: 0 auto;
+
+  padding-left: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.picture-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-left: 20px;
+
+  @include tablet {
+    position: absolute;
+
+    top: 131px;
+    right: 0;
+  }
+
+  @include desktop {
+    top: 100px;
+    right: 0;
+  }
+}
+
+.app {
+  margin-top: 0;
+
+  display: flex;
+  justify-content: center;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.select {
+  width: 100%;
+  position: relative;
+}
+
+.select.open {
+  .select__dropdown {
+    display: block;
+  }
+}
+
+.select__input {
+  z-index: 1;
+  width: 93px;
+  height: 34px;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+
+  cursor: pointer;
+  text-align: start;
+  align-items: center;
+
+  background-color: var(--white-color);
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.35;
+  color: var(--accent-color);
+  margin: 0 auto;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero__icon {
+  margin-right: 10px;
+  fill: var(--accent-color);
+}
+
+.select__input-checked {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+
+  .hero__icon {
+    fill: var(--white-color);
+  }
+}
+
+.select__dropdown {
+  width: 94px;
+  margin: 0 auto;
+  position: absolute;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  top: 34px;
+  left: 0;
+  right: 0;
+  max-height: 84px;
+  overflow-y: auto;
+}
+
+.select ::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 4px;
+}
+
+.select ::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+.select ::-webkit-scrollbar-thumb {
+  background: #fd5103;
+  border-radius: 4px;
+}
+
+.select__list {
+  padding-left: 10px;
+}
+
+.select__item {
+  height: 28px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 1.5;
+
+  display: flex;
+  align-items: center;
+
+  color: var(--gray-color);
+}
+
+.input-span {
+  padding-left: 10px;
+}
+
+.hero__img {
+  width: 100%;
+}
+
+// sorry section
+.sorry {
+  margin-top: 100px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.sorry__title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.91;
+
+  text-align: center;
+
+  color: var(--black-color);
+
+  margin-bottom: 63px;
+  width: 280px;
+
+  @include tablet {
+    width: 331px;
+
+    font-size: 32px;
+    line-height: 1.31;
+  }
+
+  @include desktop {
+    width: 493px;
+
+    font-size: 48px;
+    line-height: 1.5;
+  }
+}
+
+.sorry__picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
