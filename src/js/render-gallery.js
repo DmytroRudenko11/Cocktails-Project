@@ -91,14 +91,15 @@ async function renderRandomCocktails() {
 }
 renderRandomCocktails();
 
-function buildGallery(searchValue) {
+async function buildGallery(searchValue) {
   paginatorList.innerHTML = '';
   backwardBox.innerHTML = '';
   forwardBox.innerHTML = '';
+
   paginator.classList.remove('visually-hidden');
   currentPage = 1;
 
-  totalPages = Math.ceil(searchValue.length / perPage);
+  totalPages = await Math.ceil(searchValue.length / perPage);
 
   handlePagination(searchValue, totalPages, currentPage);
 }
